@@ -1,4 +1,7 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercise {
 
@@ -16,14 +19,32 @@ public class MethodsExercise {
 //        division(12, 0);
 //        modulus(17, 3);
 
-        System.out.print("Enter a number between 1 and 10: ");
-        System.out.println("userInput = " + getInteger(1, 10));
+//        System.out.print("Enter a number between 1 and 10: ");
+//        System.out.println("userInput = " + getInteger(1, 10));
 
-        while (start) {
-            System.out.println("calculateFactorial = " + calculateFactorial());
+//        while (start) {
+//            System.out.println("calculateFactorial = " + calculateFactorial());
+//            System.out.println("would you like to continue? (y/n)");
+//            start = scan.nextLine().equalsIgnoreCase("y");
+//        }
+
+
+//        do {
+//            System.out.println("How many sides on your die?");
+//            rollDice(getInteger(1, 100));
+//
+//            System.out.println("would you like to continue? (y/n)");
+//        } while (scan.nextLine().equalsIgnoreCase("y"));
+
+
+        do {
+            Random random = new Random();
+            int winningNumber = random.nextInt(100) + 1;
+            System.out.println("Guess the number 1-100");
+            guessGame(getInteger(1, 100), winningNumber);
+
             System.out.println("would you like to continue? (y/n)");
-            start = scan.nextLine().equalsIgnoreCase("y");
-        }
+        } while (scan.nextLine().equalsIgnoreCase("y"));
 
     }
 
@@ -72,6 +93,30 @@ public class MethodsExercise {
 
         }
         return output;
+    }
+
+    public static void rollDice(int sides) {
+//        create an instance of the random class
+        Random random = new Random();
+        int random1 = random.nextInt(sides) + 1;
+        int random2 = random.nextInt(sides) + 1;
+        System.out.println("random1 = " + random1);
+        System.out.println("random2 = " + random2);
+    }
+
+
+    public static void guessGame(int firstGuess, int winningNumber ) {
+
+//        guess = Integer.parseInt(scan.nextLine());
+        if (firstGuess == winningNumber) {
+            System.out.println("Great guess, you won!!");
+        } else if (firstGuess < winningNumber) {
+            System.out.println("guess higher! try again:");
+            guessGame(getInteger(1,100),winningNumber);
+        } else {
+            System.out.println("guess lower! try again:");
+            guessGame(getInteger(1,100),winningNumber);
+        }
     }
 
 
