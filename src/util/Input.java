@@ -7,7 +7,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
    public String getString() {
-        System.out.println("Enter a string\n");
+//        System.out.println("Enter a string\n");
         String input = scanner.nextLine();
         return input;
     }
@@ -39,9 +39,10 @@ public class Input {
 
 
     public int getInt() {
-        System.out.println("give me an integer\n");
+//        System.out.println("give me an integer\n");
         int input = scanner.nextInt();
         return input;
+
     }
 
    public double getDouble(double min, double max) {
