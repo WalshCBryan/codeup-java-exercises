@@ -13,7 +13,7 @@ public class ShapesTest {
         System.out.println("myShape.getArea() = " + myShape.getArea());
         System.out.println("myShape.getPerimeter() = " + myShape.getPerimeter());
 
-        myShape.
+
 
 
 //        System.out.println("~~~~~~~~~~~~~~~~~~~~");
