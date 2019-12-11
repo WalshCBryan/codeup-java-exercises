@@ -23,9 +23,9 @@ public class Classroom {
 
         if (!Files.exists(path)) {
             try {
-                Files.createDirectories(path);
-//                Files.createDirectories(Paths.get(dir));
-//                Files.createFile(Paths.get(fileName));
+//                Files.createDirectories(path);
+                Files.createDirectories(Paths.get(dir));
+                Files.createFile(Paths.get(fileName));
 
             } catch (IOException e) {
                 e.printStackTrace();
