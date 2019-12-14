@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Input {
     double num;
+    long longnum;
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
@@ -95,7 +96,7 @@ public class Input {
         System.out.println("enter a number\n");
         String input = scanner.nextLine();
         try {
-            num = Integer.valueOf(input, 16);
+            num = Integer.valueOf(input, 2);
         } catch (Exception e) {
             e.printStackTrace();
             getDouble();
