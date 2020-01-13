@@ -1,5 +1,7 @@
 package util;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.nio.channels.InterruptedByTimeoutException;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public class Input {
     double num;
     long longnum;
     private Scanner scanner = new Scanner(System.in);
+
 
     public String getString() {
 //        System.out.println("Enter a string\n");
@@ -73,6 +76,7 @@ public class Input {
     }
 
     public double getDouble() {
+
         System.out.println("enter a number\n");
         double input = Double.valueOf(getString());
         return input;
@@ -104,6 +108,10 @@ public class Input {
         return num;
     }
 
+    public static void main(String[] args) {
+
+
+    }
 }
 
 
